@@ -2,7 +2,7 @@
 
 Para praticar o padrão de projeto Bridge foi proposto a implementação do seguinte projeto:
 
-![Diagrama do padrão Bridge](./padrao_bridge/image.png)
+![Diagrama do padrão Bridge](image.png)
 
 Para gerar o executável rode o comando no terminal
 
