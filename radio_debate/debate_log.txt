@@ -1,0 +1,29 @@
+============================================
+       REGISTRO COMPLETO DO DEBATE
+============================================
+
+ 1. [21:47:48] [SISTEMA] Debate iniciado
+ 2. [21:47:48] [SORTEIO] Rodada 1/3 — Inquiridor: Ana  (A)
+ 3. [21:47:50] [CONFIGURACAO] Inquirido: Lucas (C)
+ 4. [21:47:50] [FASE] PERGUNTA (50s) | Fala: Ana 
+ 5. [21:47:52] [FASE] RESPOSTA (50s) | Fala: Lucas
+ 6. [21:47:54] [FASE] REPLICA (40s) | Fala: Ana 
+ 7. [21:47:56] [FASE] TREPLICA (30s) | Fala: Lucas
+ 8. [21:47:58] [RODADA] Rodada 1 finalizada
+ 9. [21:48:00] [SORTEIO] Rodada 2/3 — Inquiridor: João (B)
+10. [21:48:02] [CONFIGURACAO] Inquirido: Lucas (C)
+11. [21:48:02] [FASE] PERGUNTA (50s) | Fala: João
+12. [21:48:04] [FASE] RESPOSTA (50s) | Fala: Lucas
+13. [21:48:06] [FASE] REPLICA (40s) | Fala: João
+14. [21:48:08] [FASE] TREPLICA (30s) | Fala: Lucas
+15. [21:48:10] [RODADA] Rodada 2 finalizada
+16. [21:48:12] [SORTEIO] Rodada 3/3 — Inquiridor: Lucas (C)
+17. [21:48:13] [CONFIGURACAO] Inquirido: Ana  (A)
+18. [21:48:13] [FASE] PERGUNTA (50s) | Fala: Lucas
+19. [21:48:15] [FASE] RESPOSTA (50s) | Fala: Ana 
+20. [21:48:17] [FASE] REPLICA (40s) | Fala: Lucas
+21. [21:48:19] [FASE] TREPLICA (30s) | Fala: Ana 
+22. [21:48:21] [RODADA] Rodada 3 finalizada
+23. [21:48:21] [SISTEMA] Debate encerrado
+
+============================================

@@ -7,28 +7,30 @@
 #include "Microfone.hpp"
 
 class Candidato {
-private:
+protected:
     int         id;
     std::string nome;
-    std::string partido;
     bool        jaPerguntou;
-    std::list<Observador*> observadores;
 
 public:
     Microfone* microfone;
+    std::list<Observador*> observadores;
 
-    Candidato(int id, const std::string& nome, const std::string& partido);
-    ~Candidato();
+    Candidato(int id, const std::string& nome);
+    virtual ~Candidato();
 
+    // Sujeito (Observer)
     void cadastrar(Observador* o);
     void remover(Observador* o);
     void notificar();
 
+    // Getters
     int         getId()          const;
     std::string getNome()        const;
-    std::string getPartido()     const;
     bool        getJaPerguntou() const;
     void        marcarComoInquiridor();
+
+    virtual std::string getPartido() const = 0;
 };
 
 #endif

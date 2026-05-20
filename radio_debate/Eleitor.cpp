@@ -8,8 +8,10 @@ Eleitor::Eleitor(const std::string& nome, Candidato* candidato)
 }
 
 void Eleitor::atualizar() {
-    std::cout << "  >> [NOTIFICACAO] Eleitor " << nome
-              << " | Seu candidato " << candidatoPreferido->getNome()
-              << " (" << candidatoPreferido->getPartido() << ")"
-              << " esta com a palavra!" << std::endl;
+    std::cout << "  [OBSERVER] Eleitor " << nome
+              << " notificado: Candidato "
+              << candidatoPreferido->getNome()
+              << " esta falando!" << std::endl;
 }
+
+std::string Eleitor::getNomeEleitor() const { return nome; }

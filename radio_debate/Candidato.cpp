@@ -1,7 +1,7 @@
 #include "Candidato.hpp"
 
-Candidato::Candidato(int id, const std::string& nome, const std::string& partido)
-    : id(id), nome(nome), partido(partido), jaPerguntou(false)
+Candidato::Candidato(int id, const std::string& nome)
+    : id(id), nome(nome), jaPerguntou(false)
 {
     microfone = new Microfone(id);
 }
@@ -18,6 +18,5 @@ void Candidato::notificar() {
 
 int         Candidato::getId()          const { return id; }
 std::string Candidato::getNome()        const { return nome; }
-std::string Candidato::getPartido()     const { return partido; }
 bool        Candidato::getJaPerguntou() const { return jaPerguntou; }
 void        Candidato::marcarComoInquiridor()  { jaPerguntou = true; }

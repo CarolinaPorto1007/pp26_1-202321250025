@@ -9,7 +9,6 @@ class Fachada {
 private:
     static Fachada*    instance;
     GerenciadorDebate* gerenciador;
-
     Fachada();
 
 public:
@@ -20,11 +19,8 @@ public:
     static Fachada* getInstance();
 
     void configurarDebate(const std::vector<Candidato*>& candidatos, int tempos[]);
-    void sortearInquiridor();
     void definirInquirido(int idCandidato);
     void iniciarDebate();
-    void iniciarPrimeiraFase();
-    void avancarEtapa();
     void finalizarDebate();
 };
 
