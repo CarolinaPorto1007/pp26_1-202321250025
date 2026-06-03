@@ -5,17 +5,20 @@
 #include <iomanip>
 #include "Observador.hpp"
 #include "Candidato.hpp"
+#include "Prototype.hpp"
 
-class Eleitor : public Observador {
+class Eleitor : public Observador, public Prototype<Eleitor> {
 private:
     int         id;
     std::string nome;
     Candidato*  candidatoPreferido;
 
 public:
-    Eleitor(const std::string& nome, Candidato* candidato);
-    void        atualizar() override;
+    Eleitor(int id, const std::string& nome, Candidato* candidato);
+    void        atualizar()      override;
+    Eleitor*    clonar()         const override;
     std::string getNomeEleitor() const;
+    int         getId()          const;
 };
 
 #endif
