@@ -4,3 +4,7 @@ CandidatoConcreto::CandidatoConcreto(int id, const std::string& nome, const std:
     : Candidato(id, nome), partido(partido) {}
 
 std::string CandidatoConcreto::getPartido() const { return partido; }
+
+CandidatoConcreto* CandidatoConcreto::clonar() const {
+    return new CandidatoConcreto(id, nome, partido);
+}
