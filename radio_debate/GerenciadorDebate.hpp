@@ -2,11 +2,14 @@
 #define GERENCIADORDEBATE_HPP
 
 #include <vector>
+#include <queue>
 #include <string>
 #include "Mediador.hpp"
 #include "Candidato.hpp"
 #include "Cronometro.hpp"
 #include "Logger.hpp"
+
+class EstadoDebate;
 
 class GerenciadorDebate : public Mediador {
 public:
@@ -14,9 +17,17 @@ public:
     int*    tempos;
     Logger* logger;
 
-private:
+    // State
+    EstadoDebate* estadoAtual;
+
+    // Fila de DR
+    std::queue<Candidato*> filaDR;
+    bool drPermitido;   // false durante execucao do DR
+
     Candidato*  inquiridor;
     Candidato*  inquirido;
+
+private:
     Cronometro* cronometro;
     std::string faseAtual;
     int         rodadaAtual;
@@ -32,8 +43,15 @@ public:
     void registrarAcao(const std::string& categoria, const std::string& acao);
     void proximaAcao() override;
     bool temCandidatosDisponiveis();
-    int  getRodadaAtual() const;
+    int  getRodadaAtual()     const;
     int  getTotalCandidatos() const;
+    std::string getFaseAtual() const;
+    void setFaseAtual(const std::string& f);
+
+    // DR
+    void solicitarDR(int idCandidato);
+    void executarDireitos();
+    void mudarEstado(EstadoDebate* novoEstado);
 };
 
 #endif
