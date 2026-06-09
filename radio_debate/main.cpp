@@ -14,7 +14,7 @@ void limparTela() { system("clear"); }
 void cabecalho()
 {
     std::cout << "\n+==================================================+" << std::endl;
-    std::cout << "|      SISTEMA DE DEBATE POLITICO — GDP v2.0        |" << std::endl;
+    std::cout << "|      SISTEMA DE DEBATE POLITICO — GDP v3.0        |" << std::endl;
     std::cout << "+==================================================+" << std::endl;
 }
 

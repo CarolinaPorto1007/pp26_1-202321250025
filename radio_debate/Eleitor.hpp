@@ -16,6 +16,8 @@ private:
 public:
     Eleitor(int id, const std::string& nome, Candidato* candidato);
     void        atualizar()      override;
+    void        atualizarDR(const std::string& nomeCandidato,
+                             const std::string& partido) override;
     Eleitor*    clonar()         const override;
     std::string getNomeEleitor() const;
     int         getId()          const;

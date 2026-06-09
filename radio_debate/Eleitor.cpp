@@ -14,6 +14,14 @@ void Eleitor::atualizar() {
               << " esta falando!" << std::endl;
 }
 
+void Eleitor::atualizarDR(const std::string& nomeCandidato,
+                           const std::string& partido) {
+    std::cout << "  [OBSERVER - DR] Eleitor " << nome
+              << " notificado: Candidato "
+              << nomeCandidato << " (" << partido << ")"
+              << " esta exercendo seu Direito de Resposta!" << std::endl;
+}
+
 Eleitor* Eleitor::clonar() const {
     return new Eleitor(id, nome, candidatoPreferido);
 }

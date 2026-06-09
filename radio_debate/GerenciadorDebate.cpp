@@ -129,14 +129,6 @@ void GerenciadorDebate::iniciarFase(int tempo) {
         inquirido->notificar();
     }
 
-    // Pergunta durante a fase se alguem quer acionar DR
-    if (drPermitido && faseAtual == "PERGUNTA") {
-        std::cout << "\n  Algum candidato deseja acionar o DR durante essa rodada?" << std::endl;
-        std::cout << "  (Digite o ID do candidato ou 0 para nenhum): ";
-        int drId; std::cin >> drId;
-        if (drId != 0) solicitarDR(drId);
-    }
-
     registrarAcao("FASE", faseAtual + " (" + std::to_string(tempo) + "s) | Fala: " + quemFala);
     cronometro->iniciar(tempo);
 }
@@ -159,7 +151,23 @@ void GerenciadorDebate::proximaAcao() {
         registrarAcao("RODADA", "Rodada " + std::to_string(rodadaAtual) + " finalizada");
         std::cout << "\n  > Rodada " << rodadaAtual << " encerrada." << std::endl;
 
-        // Verifica DR ao fim da treplica
+        // Pergunta sobre DR apenas ao fim do ciclo completo P-R-Re-Tr
+        if (drPermitido) {
+            std::cout << "\n  Algum candidato deseja solicitar Direito de Resposta?" << std::endl;
+            std::cout << "  Candidatos disponiveis:" << std::endl;
+            for (auto c : candidatos)
+                std::cout << "    [" << c->getId() << "] " << c->getNome()
+                          << " (" << c->getPartido() << ")" << std::endl;
+            std::cout << "  (Digite o ID ou 0 para nenhum): ";
+            int drId; std::cin >> drId;
+            while (drId != 0) {
+                solicitarDR(drId);
+                std::cout << "  Mais algum? (ID ou 0 para encerrar): ";
+                std::cin >> drId;
+            }
+        }
+
+        // Executa DRs pendentes
         if (!filaDR.empty()) {
             executarDireitos();
         }

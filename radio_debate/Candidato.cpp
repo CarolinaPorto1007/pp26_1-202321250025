@@ -16,6 +16,11 @@ void Candidato::notificar() {
         o->atualizar();
 }
 
+void Candidato::notificarDR() {
+    for (auto o : observadores)
+        o->atualizarDR(nome, getPartido());
+}
+
 int         Candidato::getId()          const { return id; }
 std::string Candidato::getNome()        const { return nome; }
 bool        Candidato::getJaPerguntou() const { return jaPerguntou; }
