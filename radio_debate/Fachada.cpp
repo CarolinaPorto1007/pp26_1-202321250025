@@ -47,15 +47,14 @@ void Fachada::iniciarDebate() {
         while (!valido) {
             std::cout << "\n  Digite o ID do inquirido: ";
             std::cin >> escolha;
-            // Valida: não pode ser o próprio inquiridor
             for (auto c : gerenciador->candidatos) {
-                if (c->getId() == escolha) {
+                if (c->getId() == escolha && c != gerenciador->inquiridor) {
                     valido = true;
                     break;
                 }
             }
             if (!valido)
-                std::cout << "  ID inválido. Tente novamente." << std::endl;
+                std::cout << "  ID invalido ou e o proprio inquiridor. Tente novamente." << std::endl;
         }
 
         gerenciador->definirInquirido(escolha);

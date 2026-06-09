@@ -2,21 +2,31 @@
        REGISTRO COMPLETO DO DEBATE
 ============================================
 
- 1. [00:53:38] [SISTEMA] Debate iniciado
- 2. [00:53:38] [SORTEIO] Rodada 1/2 — Inquiridor: Maria (B)
- 3. [00:53:41] [CONFIGURACAO] Inquirido: José (A)
- 4. [00:53:41] [FASE] PERGUNTA (50s) | Fala: Maria
- 5. [00:53:41] [FASE] RESPOSTA (50s) | Fala: José
- 6. [00:53:42] [FASE] REPLICA (40s) | Fala: Maria
- 7. [00:53:42] [FASE] TREPLICA (30s) | Fala: José
- 8. [00:53:43] [RODADA] Rodada 1 finalizada
- 9. [00:53:45] [SORTEIO] Rodada 2/2 — Inquiridor: José (A)
-10. [00:53:46] [CONFIGURACAO] Inquirido: Maria (B)
-11. [00:53:46] [FASE] PERGUNTA (50s) | Fala: José
-12. [00:53:46] [FASE] RESPOSTA (50s) | Fala: Maria
-13. [00:53:47] [FASE] REPLICA (40s) | Fala: José
-14. [00:53:47] [FASE] TREPLICA (30s) | Fala: Maria
-15. [00:53:48] [RODADA] Rodada 2 finalizada
-16. [00:53:48] [SISTEMA] Debate encerrado
+ 1. [22:26:01] [SISTEMA] Debate iniciado
+ 2. [22:26:01] [SORTEIO] Rodada 1/2 — Inquiridor: Ana
+ 3. [22:26:06] [CONFIGURACAO] Inquirido: Bruno
+ 4. [22:26:06] [FASE] PERGUNTA (60s) | Fala: Ana
+ 5. [22:26:06] [FASE] RESPOSTA (50s) | Fala: Bruno
+ 6. [22:26:07] [FASE] REPLICA (40s) | Fala: Ana
+ 7. [22:26:07] [FASE] TREPLICA (30s) | Fala: Bruno
+ 8. [22:26:08] [RODADA] Rodada 1 finalizada
+ 9. [22:26:24] [DR] Solicitacao de DR: Bruno
+10. [22:26:34] [DR] Direito de Resposta concedido pelo operador
+11. [22:26:34] [DR] Defesa: Bruno (B)
+12. [22:26:36] [DR] Direito de Resposta encerrado. Retomando debate.
+13. [22:26:38] [SORTEIO] Rodada 2/2 — Inquiridor: Bruno
+14. [22:26:43] [CONFIGURACAO] Inquirido: Ana
+15. [22:26:43] [FASE] PERGUNTA (60s) | Fala: Bruno
+16. [22:26:44] [FASE] RESPOSTA (50s) | Fala: Ana
+17. [22:26:44] [FASE] REPLICA (40s) | Fala: Bruno
+18. [22:26:45] [FASE] TREPLICA (30s) | Fala: Ana
+19. [22:26:45] [RODADA] Rodada 2 finalizada
+20. [22:26:53] [DR] Solicitacao de DR: Ana
+21. [22:26:58] [DR] Solicitacao de DR: Bruno
+22. [22:27:05] [DR] Direito de Resposta concedido pelo operador
+23. [22:27:05] [DR] Defesa: Ana (A)
+24. [22:27:07] [DR] Defesa: Bruno (B)
+25. [22:27:09] [DR] Direito de Resposta encerrado. Retomando debate.
+26. [22:27:09] [SISTEMA] Debate encerrado
 
 ============================================

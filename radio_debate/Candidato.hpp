@@ -11,20 +11,19 @@ protected:
     int         id;
     std::string nome;
     bool        jaPerguntou;
+    std::list<Observador*> observadores;
 
 public:
     Microfone* microfone;
-    std::list<Observador*> observadores;
 
     Candidato(int id, const std::string& nome);
     virtual ~Candidato();
 
-    // Sujeito (Observer)
     void cadastrar(Observador* o);
     void remover(Observador* o);
     void notificar();
+    void notificarDR();         // notificacao especifica de DR
 
-    // Getters
     int         getId()          const;
     std::string getNome()        const;
     bool        getJaPerguntou() const;

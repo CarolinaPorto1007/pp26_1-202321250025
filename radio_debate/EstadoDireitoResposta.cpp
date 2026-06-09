@@ -6,10 +6,10 @@
 #include <chrono>
 
 void EstadoDireitoResposta::executar(GerenciadorDebate* ctx) {
-    ctx->drPermitido = false;   // bloqueia novos DRs durante as defesas
+    ctx->drPermitido = false;
 
     std::cout << "\n  +------------------------------------------+" << std::endl;
-    std::cout << "  |        DIREITO DE RESPOSTA               |" << std::endl;
+    std::cout << "  |        DIREITO DE RESPOSTA                 |" << std::endl;
     std::cout << "  +------------------------------------------+" << std::endl;
 
     while (!ctx->filaDR.empty()) {
@@ -25,7 +25,7 @@ void EstadoDireitoResposta::executar(GerenciadorDebate* ctx) {
                   << " (" << solicitante->getPartido() << ")" << std::endl;
 
         solicitante->microfone->ligar();
-        solicitante->notificar();   // Observer — notifica eleitores sobre DR
+        solicitante->notificarDR();     // notifica eleitores especificamente sobre DR
 
         ctx->registrarAcao("DR",
             "Defesa: " + solicitante->getNome() +
